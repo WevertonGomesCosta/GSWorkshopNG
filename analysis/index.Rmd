@@ -5,7 +5,64 @@ output:
   workflowr::wflow_html:
     toc: false
 editor_options:
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
-Welcome to my research website.
+Welcome to my example GS repository. I followed the instructions [here](https://wolfemd.github.io/GenomicSelectionManual/create_project.html) to create this project.
+
+I'm going to follow along the [Genomic Selection Manual](https://wolfemd.github.io/GenomicSelectionManual/) throughout this project.
+
+## Data download
+
+Create the "download.Rmd"
+
+```{r, eval=F}
+wflow_open("analysis/download.Rmd")
+```
+
+Link to it: [Data Download Stage](download.html)
+
+Add it to the top navigation bar, via the `_site.yml` file:
+
+![](images/paste-72D2779D.png)
+
+## Table of Contents
+
+1. [Data Download Stage](download.html)
+2. [Clean phenotype data](clean_phenos.html): standard procedures to prepare phenotypes for analysis.
+3. [Prepare genotypic data](prep_genos.html): standard procedures to prepare genotypic inputs (e.g. haplotype matrices) for genomic mate selection analyses.
+
+
+**TROUBLESHOOTING RMD:** [Troubleshooting each step](troubleshooting.html)
+
+## Committing and publishing 
+
+Example, first commit:
+
+![](images/paste-1EE3E624.png)
+
+**VERY IMPORTANT NOTE:** here I'm adding the `data/metadata.csv` and `data/phenotype.csv`. These are small files and I want them available to workshop users. DO NOT make a habit of this. GitHub max size is 25 Mb. ESPECIALLY DO NOT add genomic data files to your Git version control.
+
+![](images/paste-90E446A0.png)
+
+## Publishing to GitHub Pages
+
+Follow the manual's instructions at: <https://wolfemd.github.io/GenomicSelectionManual/create_project.html#publishing-on-github-pages>
+
+In addition, edit repository details, adding the GitHub pages web address and a short description, like so:
+
+![](images/paste-CB5D91AC.png)
+
+![](images/paste-AD7AEEAC.png)
+
+Consider modifying the `README.md` file in the main project folder, as it will display to anyone viewing the repository directly on GitHub.
+
+![](images/paste-2F34C15B.png)
+
+## Customize `workflowR` project
+
+### Inline chunk output
+
+Change chunk output setting to "inline output" instead of "console"
+
+![](images/paste-46ECDEBA.png)
