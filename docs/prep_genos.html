@@ -15,7 +15,7 @@
 
 <title>Prepare genotypic data</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -75,6 +75,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -95,6 +96,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -320,7 +324,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -368,7 +372,9 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -377,7 +383,9 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -386,17 +394,27 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-04-01
+<strong>Last updated:</strong> 2022-06-03
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>GSexample2022/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>GSWorkshopNG/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
 </p>
 <p>
-This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/workflowr/workflowr">workflowr</a> (version 1.7.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.0). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -405,119 +423,151 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
 </p>
 </div>
 <div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20220320code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20220320)</code> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20220602code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20220602)</code> </a>
 </p>
 </div>
-<div id="strongSeedstrongcodesetseed20220320code" class="panel-collapse collapse">
+<div id="strongSeedstrongcodesetseed20220602code"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>The command <code>set.seed(20220320)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+<p>The command <code>set.seed(20220602)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
 </p>
 </div>
-<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
 </p>
 </div>
 <div id="strongCachestrongnone" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
 </p>
 </div>
 <div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomwolfemdGSexample2022tree9be405cd8f4bad70b9d4325363b9198ed04fd03btargetblank9be405ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/wolfemd/GSexample2022/tree/9be405cd8f4bad70b9d4325363b9198ed04fd03b" target="_blank">9be405c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGSWorkshopNGtree04a4f46f57891fd510aee3080d10241093073c39targetblank04a4f46a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/tree/04a4f46f57891fd510aee3080d10241093073c39" target="_blank">04a4f46</a>
+</a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomwolfemdGSexample2022tree9be405cd8f4bad70b9d4325363b9198ed04fd03btargetblank9be405ca" class="panel-collapse collapse">
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGSWorkshopNGtree04a4f46f57891fd510aee3080d10241093073c39targetblank04a4f46a"
+class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/wolfemd/GSexample2022/tree/9be405cd8f4bad70b9d4325363b9198ed04fd03b" target="_blank">9be405c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/tree/04a4f46f57891fd510aee3080d10241093073c39" target="_blank">04a4f46</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
 </p>
 <p>
-Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
 </p>
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  .DS_Store
-    Untracked:  Icon
-    Untracked:  analysis/.DS_Store
-    Untracked:  analysis/Icon
-    Untracked:  analysis/images/Icon
-    Untracked:  analysis/images/paste-2F34C15B.png
-    Untracked:  analysis/images/paste-AD7AEEAC.png
-    Untracked:  analysis/images/paste-CB5D91AC.png
-    Untracked:  analysis/troubleshooting.Rmd
-    Untracked:  code/Icon
-    Untracked:  data/.DS_Store
-    Untracked:  data/BreedBaseGenotypesDownload.vcf
-    Untracked:  data/Icon
-    Untracked:  data/metadata_cynthia.csv
-    Untracked:  data/phenotype_cynthia.csv
-    Untracked:  output/.DS_Store
-    Untracked:  output/Icon
     Untracked:  output/phenotypes_cleaned.rds
 
 </code></pre>
 <p>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
 </p>
 </div>
 </div>
@@ -528,7 +578,12 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/prep_genos.Rmd</code>) and HTML (<code>docs/prep_genos.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/prep_genos.Rmd</code>) and HTML
+(<code>docs/prep_genos.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -554,36 +609,36 @@ Message
 <tbody>
 <tr>
 <td>
-html
+Rmd
 </td>
 <td>
-<a href="https://rawcdn.githack.com/wolfemd/GSexample2022/adb7ede079281ff2c2bf22c710b3e2c7d2cccc55/docs/prep_genos.html" target="_blank">adb7ede</a>
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/blob/04a4f46f57891fd510aee3080d10241093073c39/analysis/prep_genos.Rmd" target="_blank">04a4f46</a>
 </td>
 <td>
-wolfemd
+WevertonGomesCosta
 </td>
 <td>
-2022-04-01
+2022-06-03
 </td>
 <td>
-Build site.
+Start workflowr project.
 </td>
 </tr>
 <tr>
 <td>
-Rmd
+html
 </td>
 <td>
-<a href="https://github.com/wolfemd/GSexample2022/blob/b62cd6d4b3a93bcc0db9fb11e0366c9d6b311fdb/analysis/prep_genos.Rmd" target="_blank">b62cd6d</a>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GSWorkshopNG/8b16afb0558bac019c2053dc62a960acecf38cde/docs/prep_genos.html" target="_blank">8b16afb</a>
 </td>
 <td>
-wolfemd
+WevertonGomesCosta
 </td>
 <td>
-2022-04-01
+2022-06-02
 </td>
 <td>
-Add the ‘prep genos’ steps
+Examples files
 </td>
 </tr>
 </tbody>
@@ -616,7 +671,8 @@ Add the ‘prep genos’ steps
 <pre class="bash"><code>ssh userid@cbsumm21.biohpc.cornell.edu</code></pre>
 </div>
 </div>
-<div id="create-a-directory-on-workdir-for-days-work" class="section level2">
+<div id="create-a-directory-on-workdir-for-days-work"
+class="section level2">
 <h2>Create a directory on <code>/workdir/</code> for days work</h2>
 <p>Go to <code>/workdir/</code></p>
 <pre class="bash"><code>cd /workdir/</code></pre>
@@ -626,10 +682,12 @@ Add the ‘prep genos’ steps
 <p>Create a sub-directory for <em>this</em> analysis.</p>
 <p>Example:</p>
 <pre class="bash"><code>mkdir /workdir/mw489/GSexample2022</code></pre>
-<p>Navigate into your subdirectory on <code>/workdir/</code> (empty now).</p>
+<p>Navigate into your subdirectory on <code>/workdir/</code> (empty
+now).</p>
 <p>Example:</p>
 <pre class="bash"><code>cd /workdir/youruserid/GSexample2022</code></pre>
-<p>Copy the <code>data/</code> and <code>output/</code> from <em>my</em> <code>/workdir/mw489/GSexample2022/</code> location, into yours.</p>
+<p>Copy the <code>data/</code> and <code>output/</code> from <em>my</em>
+<code>/workdir/mw489/GSexample2022/</code> location, into yours.</p>
 <p>Example:</p>
 <pre class="bash"><code>cp -r /workdir/mw489/GSexample2022/data /workdir/youruserid/GSexample2022/
 cp -r /workdir/mw489/GSexample2022/output /workdir/youruserid/GSexample2022/</code></pre>
@@ -731,7 +789,8 @@ read.table(here::here(&quot;data&quot;,&quot;BreedBaseGenotypesDownload.position
 </div>
 <div id="haplotype-matrix-from-vcf" class="section level2">
 <h2>Haplotype matrix from VCF</h2>
-<p>Extract haplotypes from VCF with <code>bcftools convert --hapsample</code></p>
+<p>Extract haplotypes from VCF with
+<code>bcftools convert --hapsample</code></p>
 <pre class="bash"><code>bcftools convert --hapsample data/BreedBaseGenotypes_subset data/BreedBaseGenotypes_subset.vcf.gz</code></pre>
 <p>Read haps to R and format them.</p>
 <pre class="r"><code>library(genomicMateSelectR)
@@ -862,7 +921,8 @@ genmap %&gt;% dim</code></pre>
               unnest(data)) %&gt;% 
   distinct</code></pre>
 <pre class="r"><code>all(colnames(dosages) %in% splined_snps_genmap$DoseSNP_ID)</code></pre>
-<p>Save the interpolated map, just for the marker loci to-be-used downstream.</p>
+<p>Save the interpolated map, just for the marker loci to-be-used
+downstream.</p>
 <pre class="r"><code>splined_snps_genmap %&gt;% 
      filter(DoseSNP_ID %in% colnames(dosages)) %&gt;% 
      saveRDS(.,file=here::here(&quot;output&quot;,&quot;interpolated_genmap.rds&quot;))</code></pre>
@@ -881,7 +941,8 @@ saveRDS(recombFreqMat,file=here::here(&quot;output&quot;,&quot;recombFreqMat_1mi
 <p>Option 1) FileZilla</p>
 <p>Option 2) Command line:</p>
 <p>On my local computer, on your command line.</p>
-<p>Navigate to the project directory containing the <code>data/</code> and <code>output/</code> directories.</p>
+<p>Navigate to the project directory containing the <code>data/</code>
+and <code>output/</code> directories.</p>
 <pre class="bash"><code>scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/data/BreedBaseGenotypes_subset.vcf.gz data/
 scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/data/dosages.rds data/
 scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/data/haplotypes.rds data/
@@ -889,11 +950,13 @@ scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/output
 scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/output/kinship_dom.rds output/
 scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/output/recombFreqMat_1minus2c.rds output/
 scp mw489@cbsumm21.biohpc.cornell.edu:/workdir/youruserid/yourprojectname/output/interpolated_genmap.rds output/</code></pre>
-<p>Option 3) I’ll provide Google Drive links to download the big files, and post the small ones to my GitHub repo</p>
+<p>Option 3) I’ll provide Google Drive links to download the big files,
+and post the small ones to my GitHub repo</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
-<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">

@@ -15,7 +15,7 @@
 
 <title>Download Trial Data</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -75,6 +75,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -95,6 +96,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -320,7 +324,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -334,6 +338,12 @@ div.tocify {
 </li>
 <li>
   <a href="download.html">Download</a>
+</li>
+<li>
+  <a href="clean_phenos.html">Clean phenos</a>
+</li>
+<li>
+  <a href="prep_genos.html">Prep genos</a>
 </li>
 <li>
   <a href="about.html">About</a>
@@ -362,7 +372,9 @@ div.tocify {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -371,7 +383,9 @@ div.tocify {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -380,17 +394,27 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-03-24
+<strong>Last updated:</strong> 2022-06-03
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>GSexample2022/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>GSWorkshopNG/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
 </p>
 <p>
-This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/workflowr/workflowr">workflowr</a> (version 1.7.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.0). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -399,54 +423,67 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomwolfemdGSexample2022tree7de8e112d77447b1b273e4ca12e8613962ed5528targetblank7de8e11a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/wolfemd/GSexample2022/tree/7de8e112d77447b1b273e4ca12e8613962ed5528" target="_blank">7de8e11</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGSWorkshopNGtree04a4f46f57891fd510aee3080d10241093073c39targetblank04a4f46a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/tree/04a4f46f57891fd510aee3080d10241093073c39" target="_blank">04a4f46</a>
+</a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomwolfemdGSexample2022tree7de8e112d77447b1b273e4ca12e8613962ed5528targetblank7de8e11a" class="panel-collapse collapse">
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGSWorkshopNGtree04a4f46f57891fd510aee3080d10241093073c39targetblank04a4f46a"
+class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/wolfemd/GSexample2022/tree/7de8e112d77447b1b273e4ca12e8613962ed5528" target="_blank">7de8e11</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/tree/04a4f46f57891fd510aee3080d10241093073c39" target="_blank">04a4f46</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
 </p>
 <p>
-Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
 </p>
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  .DS_Store
-    Untracked:  Icon
-    Untracked:  analysis/.DS_Store
-    Untracked:  analysis/Icon
-    Untracked:  analysis/images/Icon
-    Untracked:  analysis/images/paste-2F34C15B.png
-    Untracked:  analysis/images/paste-AD7AEEAC.png
-    Untracked:  analysis/images/paste-CB5D91AC.png
-    Untracked:  code/Icon
-    Untracked:  data/BreedBaseGenotypesDownload.vcf
-    Untracked:  data/Icon
-    Untracked:  output/Icon
     Untracked:  output/phenotypes_cleaned.rds
 
 </code></pre>
 <p>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
 </p>
 </div>
 </div>
@@ -457,7 +494,12 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/download.Rmd</code>) and HTML (<code>docs/download.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/download.Rmd</code>) and HTML
+(<code>docs/download.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -486,33 +528,16 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/wolfemd/GSexample2022/blob/7de8e112d77447b1b273e4ca12e8613962ed5528/analysis/download.Rmd" target="_blank">7de8e11</a>
+<a href="https://github.com/WevertonGomesCosta/GSWorkshopNG/blob/8b16afb0558bac019c2053dc62a960acecf38cde/analysis/download.Rmd" target="_blank">8b16afb</a>
 </td>
 <td>
-wolfemd
+WevertonGomesCosta
 </td>
 <td>
-2022-03-24
+2022-06-02
 </td>
 <td>
-Publish corrected link to DL page
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/wolfemd/GSexample2022/a2e74926c8651a089b12d7f94f65e46251125e42/docs/download.html" target="_blank">a2e7492</a>
-</td>
-<td>
-wolfemd
-</td>
-<td>
-2022-03-20
-</td>
-<td>
-Build site.
+Examples files
 </td>
 </tr>
 <tr>
@@ -520,33 +545,16 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/wolfemd/GSexample2022/9a87a77cd915c5b7ce6ea38cd1d3041536ca3918/docs/download.html" target="_blank">9a87a77</a>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GSWorkshopNG/8b16afb0558bac019c2053dc62a960acecf38cde/docs/download.html" target="_blank">8b16afb</a>
 </td>
 <td>
-wolfemd
+WevertonGomesCosta
 </td>
 <td>
-2022-03-20
+2022-06-02
 </td>
 <td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/wolfemd/GSexample2022/blob/3366366bca152906150c06073f78c359a45ac3d3/analysis/download.Rmd" target="_blank">3366366</a>
-</td>
-<td>
-wolfemd
-</td>
-<td>
-2022-03-20
-</td>
-<td>
-First commit. Index + Download page. Include images and phenotype/metadata files for workshop purposes only!
+Examples files
 </td>
 </tr>
 </tbody>
@@ -556,22 +564,33 @@ First commit. Index + Download page. Include images and phenotype/metadata files
 </div>
 </div>
 </div>
-<p>Let’s start with the instructions for <a href="https://wolfemd.github.io/GenomicSelectionManual/download-training-data.html">downloading training data</a>.</p>
+<p>Let’s start with the instructions for <a
+href="https://wolfemd.github.io/GenomicSelectionManual/download-training-data.html">downloading
+training data</a>.</p>
 <p>I’ll take screenshots as I go, for posterity.</p>
 <div id="create-trial-list" class="section level2">
 <h2>Create trial list</h2>
-<p>In the Manual, I created a list already: “<strong>IITA_ExampleGStrials_2021Dec04</strong>”, it’s public so all participants can access.</p>
+<p>In the Manual, I created a list already:
+“<strong>IITA_ExampleGStrials_2021Dec04</strong>”, it’s public so all
+participants can access.</p>
 <p>I’ll start with that in the Wizard.</p>
 <p><img src="images/paste-93DA0BB4.png" /></p>
-<p>In the manual, 1 trial “19geneticgainUB” turned out not to have phenotypes recorded. Let’s remove it, and pick a different “genetic gain” trial.</p>
-<p>Save list (without genetic gain trial): “<strong>GSexample2022_trials</strong>”</p>
+<p>In the manual, 1 trial “19geneticgainUB” turned out not to have
+phenotypes recorded. Let’s remove it, and pick a different “genetic
+gain” trial.</p>
+<p>Save list (without genetic gain trial):
+“<strong>GSexample2022_trials</strong>”</p>
 <p>Used the wizard to select: “17.GS.GeneticGain.UB”</p>
-<p>Double-clicked the trial name in the wizard to go to the trial page: <a href="https://www.cassavabase.org/breeders/trial/5337" class="uri">https://www.cassavabase.org/breeders/trial/5337</a></p>
-<p>Checked out the “Phenotype Summary Statistics” page to verify that there <em>is</em> data for this trial.</p>
+<p>Double-clicked the trial name in the wizard to go to the trial page:
+<a href="https://www.cassavabase.org/breeders/trial/5337"
+class="uri">https://www.cassavabase.org/breeders/trial/5337</a></p>
+<p>Checked out the “Phenotype Summary Statistics” page to verify that
+there <em>is</em> data for this trial.</p>
 <p><img src="images/paste-949BB59F.png" /></p>
 <p>Added the trial to the “GSexample2022_trials” list, like so:</p>
 <p><img src="images/paste-DC5C055A.png" /></p>
-<p>I also made the trial list public so all workshop participants can use the same.</p>
+<p>I also made the trial list public so all workshop participants can
+use the same.</p>
 </div>
 <div id="download-related-trial-data" class="section level2">
 <h2>Download related trial data</h2>
@@ -590,19 +609,26 @@ First commit. Index + Download page. Include images and phenotype/metadata files
 <h2>Validate accession list</h2>
 <p>Follow the manual. After clicking “Validate” it takes some time…</p>
 <p><img src="images/paste-5D3A30EF.png" /></p>
-<p>As in the manual, I fix it by removing accessions… for your <em>real</em> population, you might not want to do that. Talk to your data managers!</p>
-<p>Remove: “<strong>Kaleso</strong>”, “<strong>W940102”, ”ANKRA” and</strong>”<strong>TOMA326(4X)</strong>”</p>
-<p>Re-validate the list. <strong>List passes validation! Success!</strong></p>
+<p>As in the manual, I fix it by removing accessions… for your
+<em>real</em> population, you might not want to do that. Talk to your
+data managers!</p>
+<p>Remove: “<strong>Kaleso</strong>”, “<strong>W940102”, ”ANKRA”
+and</strong>”<strong>TOMA326(4X)</strong>”</p>
+<p>Re-validate the list. <strong>List passes validation!
+Success!</strong></p>
 <p>Set list to public so everyone in workshop can use.</p>
 </div>
 <div id="download-genotype-data" class="section level2">
 <h2>Download genotype data</h2>
-<p>Follow manual to download. It will not be quick, do <em>outside</em> of workshop demo!</p>
-<p>Move downloaded <code>.vcf</code> file to <code>data/</code> directory.</p>
+<p>Follow manual to download. It will not be quick, do <em>outside</em>
+of workshop demo!</p>
+<p>Move downloaded <code>.vcf</code> file to <code>data/</code>
+directory.</p>
 </div>
 <div id="download-pedigree" class="section level2">
 <h2>Download pedigree</h2>
-<p>Move downloaded <code>pedigree.txt</code> file to <code>data/</code> directory.</p>
+<p>Move downloaded <code>pedigree.txt</code> file to <code>data/</code>
+directory.</p>
 </div>
 
 
